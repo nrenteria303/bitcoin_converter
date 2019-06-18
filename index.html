@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bitcoin Ticker</title>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/styles.css">
+    </head>
+
+    <body>
+        <h1>Bitcoin Converter</h1>
+        <form action="/" method="post">
+            <input type="text" name="amount" placeholder="Quantity (default is 1)">
+
+            <div>
+                <select name="crypto">
+                    <option value="BTC">Bitcoin</option>
+                    <option value="ETH">Ethereum</option>
+                    <option value="LTC">Litecoins</option>
+                </select>
+                to
+                <select name="fiat">
+                    <option value="USD">US Dollars</option>
+                    <option value="GBP">GB Pounds</option>
+                    <option value="EUR">EU Euros</option>
+                </select>
+            </div>
+
+            <button type="submit" name="button">Convert</button>
+        </form>
+    </body>
+
+</html>
