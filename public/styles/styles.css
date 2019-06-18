@@ -25,6 +25,7 @@ input {
     margin: 15px auto;
     border-radius: 8px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 select {
