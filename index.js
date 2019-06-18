@@ -33,8 +33,8 @@ app.post("/", function(req, res) {
         var price = data.price;
         // var weekAvg = data.averages.week;
         var currentDate = data.time;
-        res.write("<p style=\"font-size: 2rem;\">The current date is " + currentDate + "</p>");
-        res.write("<h1 style=\"font-size: 3.8rem;\">" + amount + crypto + " is equal to " + price + fiat + ".</h1>");
+        res.write("<div style=\"text-align: center; font-family: monospace; \"><p style=\"font-size: 2rem;\">The current date is " + currentDate + "</p>");
+        res.write("<h1 style=\"font-size: 3.8rem;\">" + amount + crypto + " is equal to " + price + fiat + ".</h1></div>");
         res.send();
     });
 });
