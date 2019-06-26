@@ -92,7 +92,7 @@ footer::after {
     border-left: solid 50vw maroon;
     border-right: solid 50vw maroon;
     border-top: solid 75px transparent;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
 }
@@ -104,7 +104,7 @@ footer::before {
     border-left: solid 50vw maroon;
     border-right: solid 50vw maroon;
     border-top: solid 75px transparent;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
 }
