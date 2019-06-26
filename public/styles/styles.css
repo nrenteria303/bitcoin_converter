@@ -56,6 +56,10 @@ h1 {
     text-shadow: 4px 4px 12px black;
 }
 
+#conversion {
+    font-size: 3rem;
+}
+
 form {
     width: fit-content;
     margin: 10px auto;
@@ -85,6 +89,11 @@ button {
 
 button:active {
     border: 4px inset gray;
+}
+
+a,
+a:visited {
+    color: white;
 }
 
 footer::after {

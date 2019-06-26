@@ -7,16 +7,21 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+app.set('view engine', 'ejs');
+
 app.get('/', function(req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/", function(req, res) {
-    // console.log(req.body.crypto);
-    var crypto = req.body.crypto;
-    var fiat = req.body.fiat;
-    var amount = req.body.amount;
-    // var finalUrl = "https://apiv2.bitcoinaverage.com/indices/global/ticker/" + crypto + fiat; 
+    var crypto;
+    var fiat;
+    var amount; 
+    var price;
+    var currentDate;
+    crypto = req.body.crypto;
+    fiat = req.body.fiat;
+    amount = req.body.amount;
 
     var options = {
         url: "https://apiv2.bitcoinaverage.com/convert/global",
@@ -30,12 +35,15 @@ app.post("/", function(req, res) {
 
     request(options, function(error, response, body) {
         var data = JSON.parse(body);
-        var price = data.price;
-        // var weekAvg = data.averages.week;
-        var currentDate = data.time;
-        res.write("<div style=\"text-align: center; font-family: monospace; \"><p style=\"font-size: 2rem;\">The current date is " + currentDate + "</p>");
-        res.write("<h1 style=\"font-size: 3.8rem;\">" + amount + crypto + " is equal to " + price + fiat + ".</h1></div>");
-        res.send();
+        price = data.price;
+        currentDate = data.time;
+        res.render("data", {
+            price: price,
+            amount: amount,
+            crypto: crypto,
+            fiat: fiat,
+            currentDate: currentDate
+        });
     });
 });
 
