@@ -1,7 +1,7 @@
 html {
     background-image: linear-gradient(to bottom, darkblue, steelblue);
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100vw;
     font-family: 'Saira Semi Condensed', sans-serif;
     color: white;
