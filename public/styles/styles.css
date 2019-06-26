@@ -37,17 +37,6 @@ header::before {
     right: 0;
 }
 
-/* body::after {
-    content: '';
-    width: 120%;
-    height: 16%;
-    transform: rotate(2deg);
-    background-color: maroon;
-    position: absolute;
-    bottom: -5%;
-    right: -10%;
-} */
-
 h1 {
     font-size: 4rem;
     margin-top: 180px;
@@ -103,7 +92,7 @@ footer::after {
     border-left: solid 50vw maroon;
     border-right: solid 50vw maroon;
     border-top: solid 75px transparent;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
 }
@@ -115,7 +104,7 @@ footer::before {
     border-left: solid 50vw maroon;
     border-right: solid 50vw maroon;
     border-top: solid 75px transparent;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
 }

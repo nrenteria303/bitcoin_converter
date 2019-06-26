@@ -14,14 +14,11 @@ app.get('/', function(req, res) {
 });
 
 app.post("/", function(req, res) {
-    var crypto;
-    var fiat;
-    var amount; 
     var price;
     var currentDate;
-    crypto = req.body.crypto;
-    fiat = req.body.fiat;
-    amount = req.body.amount;
+    var crypto = req.body.crypto;
+    var fiat = req.body.fiat;
+    var amount = req.body.amount;
 
     var options = {
         url: "https://apiv2.bitcoinaverage.com/convert/global",
