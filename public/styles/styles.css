@@ -110,6 +110,9 @@ footer::before {
 }
 
 @media (max-height: 462px) {
+    h1 {
+        margin-top: 90px;
+    }
     footer {
         display: none;
     }
