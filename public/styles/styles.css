@@ -39,7 +39,7 @@ header::before {
 
 h1 {
     font-size: 4rem;
-    margin-top: 180px;
+    margin-top: 160px;
     margin-bottom: 10px;
     line-height: 1;
     text-shadow: 4px 4px 12px black;
@@ -107,4 +107,10 @@ footer::before {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+@media (max-height: 462px) {
+    footer {
+        display: none;
+    }
 }
