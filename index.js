@@ -1,6 +1,9 @@
+require('dotenv').config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
+const http = require("http");
 
 const app = express();
 
@@ -19,10 +22,14 @@ app.post("/", function(req, res) {
     var crypto = req.body.crypto;
     var fiat = req.body.fiat;
     var amount = req.body.amount;
+    let apiKey = process.env.API_KEY;
 
     var options = {
         url: "https://apiv2.bitcoinaverage.com/convert/global",
         method: "GET",
+        headers: {
+            'x-ba-key': apiKey
+        },
         qs: {
             from: crypto,
             to: fiat,
